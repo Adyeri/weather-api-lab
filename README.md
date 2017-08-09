@@ -4,7 +4,7 @@ APIs or Application Programming Interfaces are used to get and send data between
 
 ![Weather](http://cedarcreekrealty.com/wp/wp-content/uploads/2010/12/weather.png)
 
-In this lab, we've set up a call to the Metaweather API that returns a big hash (filled with more hashes and arrays). We then save this to a variable called `top_tracks`. Here's the code that pulls that data from the API for us.
+In this lab, we've set up a call to the Metaweather API that returns a big hash (filled with more hashes and arrays). We then save this to a variable called `nyc_weather`. Here's the code that pulls that data from the API for us.
 
 ```ruby
 #import the gems we need to pull data from an API
@@ -20,6 +20,6 @@ nyc_weather = JSON.parse(response.body, {:symbolize_names => true})
 
 Fork and clone this lab, and run `bundle install` in the command line.
 
-Open up the `weather-api.rb` in your text editor and run `ruby weather-api.rb` to see the nested hash that is returned in `nyc_weather`. Then see how far you can get at parsing through this crazy nested hash of data to write code that will answer the questions in the file. There are easy, medium and hard challenges... Good luck!
+Open up the `weather-api.rb` in your text editor, un-comment line 9 and run `ruby weather-api.rb` to see the nested hash that is returned in `nyc_weather`. Then see how far you can get at parsing through this crazy nested hash of data to write code that will answer the questions in the file. There are easy, medium and hard challenges... Good luck!
 
-**Note:** You may want to use `pp` (stands for pretty print) instead of `print` or `puts` - it makes the data structures much easier to see as you're working with them!
+**Note:** The program uses `pp` (stands for pretty print) instead of `print` or `puts` - it makes the data structures much easier to see as you're working with them!
